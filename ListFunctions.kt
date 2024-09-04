@@ -16,7 +16,7 @@ fun getListOfNumbers(): List<Int> {
 fun findMax(listName: List<Int>): Int {
   var largestNumber = listName[0]
 
-  for (item in listName) {
+  for (value in listName) {
     if (value > largestNumber) {
       largestNumber = value
     }
@@ -73,6 +73,14 @@ fun main() {
 
   println("Please enter a number to check.")
   val numToFind = Integer.valueOf(readLine())
+
+  var containsValue = checkIfListContains(values, numToFind)
+
+  if (containsValue) {
+    println("The value exists within the list.")
+  } else {
+    println("The value does not exist with the list.")
+  }
 
 }
 
