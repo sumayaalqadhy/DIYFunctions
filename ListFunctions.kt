@@ -12,6 +12,7 @@ fun getListOfNumbers(): List<Int> {
   return myList
 }
 
+// Max value
 fun findMax(listName: List<Int>): Int {
   var largestNumber = listName[0]
 
@@ -23,11 +24,29 @@ fun findMax(listName: List<Int>): Int {
   return largestNumber
 }
 
+// Min value
+fun findMin(minList: List<Int>) : Int {
+  var smallestNumber = minList[0]
+
+  for(num in minList) {
+    if (num < smallestNumber) {
+      smallestNumber = num
+    }
+  }
+  return smallestNumber
+}
+
 fun main() {
   // Write more code below
 
   var values = getListOfNumbers()
   println(values)
+
+  var largestValue = findMax(values)
+  println("The largest number is $largestValue.")
+
+  var smallestValue = findMin(values)
+  println("The smallest number is $smallestValue.")
 
 }
 
