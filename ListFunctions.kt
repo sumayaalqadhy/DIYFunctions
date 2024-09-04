@@ -36,6 +36,16 @@ fun findMin(minList: List<Int>) : Int {
   return smallestNumber
 }
 
+// Find the average 
+fun findAverage(averageList: List<Int>): Int {
+  var sum = 0
+
+  for (item in averageList) {
+    sum = item + sum
+  }
+  return sum / averageList.size
+}
+
 fun main() {
   // Write more code below
 
@@ -47,6 +57,9 @@ fun main() {
 
   var smallestValue = findMin(values)
   println("The smallest number is $smallestValue.")
+
+  var average = findAverage(values)
+  println("The average is $average.")
 
 }
 
