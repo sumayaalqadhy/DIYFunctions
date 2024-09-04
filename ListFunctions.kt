@@ -10,15 +10,24 @@ fun getListOfNumbers(): List<Int> {
   }
 
   return myList
-
-
 }
 
+fun findMax(listName: List<Int>): Int {
+  var largestNumber = listName[0]
 
+  for (item in listName) {
+    if (value > largestNumber) {
+      largestNumber = value
+    }
+  }
+  return largestNumber
+}
 
 fun main() {
   // Write more code below
- 
+
+  var values = getListOfNumbers()
+  println(values)
 
 }
 
