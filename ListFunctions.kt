@@ -46,6 +46,16 @@ fun findAverage(averageList: List<Int>): Int {
   return sum / averageList.size
 }
 
+// If list contains a value
+fun checkIfListContains(containsList: List<Int>, intArg: Int): Boolean {
+  for (i in containsList) {
+    if (i == intArg) {
+      return true
+    }
+  }
+  return false
+}
+
 fun main() {
   // Write more code below
 
@@ -60,6 +70,9 @@ fun main() {
 
   var average = findAverage(values)
   println("The average is $average.")
+
+  println("Please enter a number to check.")
+  val numToFind = Integer.valueOf(readLine())
 
 }
 
